@@ -55,7 +55,7 @@ if(imc < 18.5){
 console.log("Seu ano de nascimento é " + anoNascimento );
 */
 
-let idade = Number(prompt("Qual a sua idade?"))
+/*let idade = Number(prompt("Qual a sua idade?"))
 let anoAtual = Number(prompt("Em que ano nós estamos?"));
 let anoNascimento = anoAtual - idade;
 let contadorIdadePorAno = 0;
@@ -66,4 +66,28 @@ for(let contador = anoNascimento; anoNascimento < anoAtual;  anoNascimento++){
         console.log(anoNascimento + " - " + contadorIdadePorAno + " anos de idade");
         contadorIdadePorAno++
    }
+}*/
+
+// nome , idade e salário
+
+let nome = prompt("Insira seu nome");
+let idade = Number(prompt("Inisra sua idade"));
+let salarioAtual = (prompt("Informe seu salario atual"));
+
+let verificacao = prompt("Seu nome é: " + nome + " idade: " + idade +  " salário atual: " + salarioAtual + ". Essas informações estão corretas? (S / N)")
+    if(verificacao == "N" || verificacao == "Nao" || verificacao == "nao"){
+        nomeRepetido = prompt("Insira seu nome novamente");
+        idadeRepetido = Number(prompt("Inisra sua idade novamente"));
+        salarioAtualRepetido = (prompt("Informe seu salario atual novamente"));
+    }
+
+
+let aumento = 0.015
+
+for(let ano = 1 ; ano <= 10; ano++){
+    salarioAtual = salarioAtual + (salarioAtual * aumento)
+    aumento = aumento * 2
+
+    console.log((2024 + ano) + " - " + salarioAtual);
 }
+
